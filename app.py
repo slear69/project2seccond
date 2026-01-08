@@ -16,7 +16,7 @@ def load_model():
         from sklearn.datasets import load_digits
         from sklearn.neural_network import MLPClassifier
         from sklearn.model_selection import train_test_split
-        digits load_digits()
+        digits = load_digits()
         X digits.images.reshape((len(digits.images), -1)) / 16.0
         y = digits.target
         X_train, _, y_train, = train_test_split(X, y, test_size=0.2, random_state=42)
