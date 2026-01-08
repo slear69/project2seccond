@@ -20,7 +20,7 @@ def load_model():
         X =digits.images.reshape((len(digits.images), -1)) / 16.0
         y = digits.target
         X_train, _, y_train, = train_test_split(X, y, test_size=0.2, random_state=42)
-        model = MLPClassifier(hidden_layer_sizes=(100,),max_iter=100,random state=42)
+        model = MLPClassifier(hidden_layer_sizes=(100,),max_iter=100,random_state=42)
         model.fit(X_train, y_train)
         return model
     except Exception as e:
